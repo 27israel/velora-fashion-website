@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Silex v3.9.0">
+<link rel="stylesheet" href="/css/contact-e51e51c444a65de70c16c091f0bf09ad6e75116c61813fd9a4ac0a2b3c797547.css" />
+<style>
+/* NAVIGATION RESTORE - consistent nav on every page */
+.Same_text{text-decoration:none}
+#i0ufg-4-3{display:flex;justify-content:space-between;max-width:1200px;width:100%}
+#ig43e-4-3{display:flex;align-items:center;column-gap:10px;padding:0 10px}
+#ibk8cv,#i4tozs,#ioidp7{display:none}
+#ihvi5b,#i5zx9l,#i1kx9r,#isrtz3{display:none}
+@media (max-width:480px){
+#ihvi5b,#i5zx9l,#i1kx9r,#isrtz3{display:flex;align-items:center;justify-content:center;width:40px;height:40px;font-size:32px;background:transparent;border:none;cursor:pointer}
+#ig43e-4-3,#ig43e-4-2,#ig43e-4-2-2{display:none !important;background-color:#a88a5b;flex-direction:column;position:absolute;left:0;top:100px;width:100%;height:200px;z-index:1857;padding:10px;justify-content:space-between;column-gap:10px;transition:transform 0.9s ease}
+#ii2tzj:checked ~ #ig43e,
+#ibk8cv:checked ~ #ig43e-4-3,
+#i4tozs:checked ~ #ig43e-4-2,
+#ioidp7:checked ~ #ig43e-4-2-2{display:flex !important}
+}
+</style>
+
+<script>
+(function () {
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbzD02sQfmOFeCYCjxptSs8JSCM9BDPjHS3oKsMzII3pJ-RKK6gV6qGGH9o7Y0ycf1ws/exec";
+
+  function setupVeloraForm() {
+    const nameInput = document.getElementById("i8hamg");
+    const emailInput = document.getElementById("i8hamg-2");
+    const messageInput = document.getElementById("id4qq6");
+    const submitButton = document.getElementById("imxqas");
+
+    if (!nameInput || !emailInput || !messageInput || !submitButton) {
+      console.error("VELORA: Form fields or button not found.");
+      return;
+    }
+
+    submitButton.addEventListener("click", async function (event) {
+      event.preventDefault();
+
+      const name = nameInput.value.trim();
+      const email = emailInput.value.trim();
+      const message = messageInput.value.trim();
+
+      if (!name || !email || !message) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      submitButton.disabled = true;
+
+      const data = new URLSearchParams({
+        name: name,
+        email: email,
+        message: message
+      });
+
+      try {
+        await fetch(scriptURL, {
+          method: "POST",
+          mode: "no-cors",
+          body: data
+        });
+
+        alert("Your message was submitted. Please allow a moment for processing.");
+
+        nameInput.value = "";
+        emailInput.value = "";
+        messageInput.value = "";
+      } catch (error) {
+        console.error("VELORA submission error:", error);
+        alert("Submission failed. Please try again.");
+      } finally {
+        submitButton.disabled = false;
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupVeloraForm);
+  } else {
+    setupVeloraForm();
+  }
+})();
+</script>
+
+
+
+
+<link href="https://fonts.googleapis.com" rel="preconnect" ><link href="https://fonts.googleapis.com/css2" rel="preconnect" crossorigin ><link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" ><link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet" ></head>
+<body id="iihc4i"><div id="icoc-3-2-2" class="silex-default-container"><div id="i0ufg-4-2-2" class="silex-default-container"><div id="igfi-4-2-2" class="silex-default-container"><div id="i9du8-4-2-2" class="silex-default-text">VELORA</div></div><div id="iaivfx"></div><input type="checkbox" id="ioidp7"/><label for="ioidp7" id="isrtz3">☰</label><div for="ioidp7" id="ig43e-4-2-2" class="silex-default-container"><a href="./home-page.html" id="ilb2q-4-2-2" class="silex-default-text Same_text">HOME</a><A href="./about-page.html" id="ilb2q-6-5" class="silex-default-text Same_text">ABOUT</A><A href="./collection.html" id="ilb2q-5-5" class="silex-default-text Same_text">COLLECTION</A><A href="./contact.html" id="i2x3n-3-2-2" class="silex-default-text Same_text">CONTACT</A></div></div></div><div id="i7wlh-2-2-2" class="silex-default-container"><div id="ieo8t-2-2-2" class="silex-default-container"></div></div><div id="ir7rj-2-3" class="silex-default-container"><div id="i8r12-2-3" class="silex-default-container"><span id="ig2r9-3-3">CONTACT</span><h2 data-tsd-source="/src/routes/index.tsx:75:13" id="i1aii-3-3" class="font-heading text-3xl font-medium text-foreground md:text-4xl">Get in Touch</h2><div id="iv8nv1-3" class="silex-default-text">Question about an order, sizing or a piece? We'd love to hear from you.</div><div id="i7oscj" class="silex-default-container"><form method="get" id="ixp4kk"><div id="inl7dh"><label for="i8hamg" id="ivwcxu">NAME</label><input type="text" id="i8hamg" placeholder="Your full name"/></div><div id="i9nvk3"><label for="i8hamg-2" id="i4teg9">EMAIL</label><input type="email" id="i8hamg-2" placeholder="you@example.com"/></div><div id="idgtyy"><label for="id4qq6" id="iizgg4">MESSAGE</label><textarea id="id4qq6" placeholder="How can we help?"></textarea></div><div><button type="button" id="imxqas">SEND MESSAGE</button></div></form></div></div></div><div id="i93c9-2-2-2" class="silex-default-container"><div id="i0ufg-2-4-2-2" class="silex-default-container"><div id="igfi-2-3-2-2" class="silex-default-container"><div id="i9du8-2-3-2-2" class="silex-default-text">VELORA</div></div><div id="ig43e-2-4-2-2" class="silex-default-container"><div id="iu1iq-2-3-2-2" class="silex-default-text same_text_footer">INSTAGRAM</div><div id="igwsr-2-3-2-2" class="silex-default-text same_text_footer">PINTEREST</div><div id="ilb2q-2-4-2-2" class="silex-default-text same_text_footer">TIKTOK</div></div></div></div><div id="inwczh-2-2-2" class="silex-default-container"><div id="ih8phr-2-2" class="silex-default-container"><div id="ips244-2-2" class="silex-default-text">@ 2026 VELORA. All right reserved</div></div></div></body>
+</html>

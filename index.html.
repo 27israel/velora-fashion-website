@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0; url=/home">
   <title>VELORA</title>
 </head>
 <body>
-  <p>Opening VELORA...</p>
-  <a href="/home">Continue to VELORA</a>
+  <script>
+    window.location.replace("/home.html");
+  </script>
 </body>
 </html>
